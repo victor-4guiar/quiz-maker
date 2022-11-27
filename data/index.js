@@ -1,22 +1,3 @@
-let quizVal = {
-	ord: 0, //Ordem das questões e opções do quiz
-	acertos: 0,
-	erros: 0,
-	titles: [ //Títulos do quiz
-	'Qual o Pokémon favorito de Victor?', 
-	'Qual a edição de Pokémon favorita de Victor?',
-	'Qual a cor favorita de Victor?'],
-	options:
-	[ //Valores das opções
-	['Raichu', 'Dragonite', 'Pikachu'],
-	['Pokémon Fire Red', 'Pokémon Gold', 'Pokémon Ruby'],
-	['Azul', 'Verde', 'Vermelho', 'Roxo']
-	],
-	img: ['data/img/img_0.png', '', 'data/img/img_0.png'], //Atalho das imagens
-	imgName: ['Sayori', 'Sayori', 'Sayori'], //Nome das imagens
-	certos: [3, 3, 4] //Numeração das respostas certas
-}
-
 function make(){
 	let main = document.getElementById('main');
 	let quiz = document.createElement('div');
@@ -40,19 +21,6 @@ function make(){
 			<li><span id="${c}" class="option" onclick="addic(${c})">${ordop[c]}</span></li>
 		`;
 	}
-}
-
-function results(){
-	let main = document.getElementById('main');
-	let result = document.createElement('result');
-	result.setAttribute('id', 'result');
-	result.classList.add('result');
-	result.innerHTML += `
-		<h1>Resultados</h1>
-		<p>Acertos: ${quizVal.acertos}</p>
-		<p>Erros: ${quizVal.erros}</p>
-	`;
-	main.appendChild(result);
 }
 
 function addic(clicado){
