@@ -54,7 +54,7 @@ function results(){
 		`;
 		document.getElementById('res').style.marginBottom = '0px';
 	}else{
-		document.getElementById('acertos').style.width = `${quizVal.acertos * 5}%`;
-		document.getElementById('erros').style.width = `${quizVal.erros * 5}%`;
+		document.getElementById('acertos').style.width = `${quizVal.acertos / quizVal.titles.length * 50}%`;
+		document.getElementById('erros').style.width = `${quizVal.erros / quizVal.titles.length * 50}%`;
 	}
 }

@@ -115,10 +115,10 @@ body{
 }
 
 .era-plac, .cer-plac{
-	display: flex;
+	display: inline;
 	font-weight: bold;
-	margin-left: 1em;
+	text-align: center;
+	margin-left: .8em;
 	min-width: 45%;
 	border-right: 2px solid #777;
-	text-align: center;
 }
