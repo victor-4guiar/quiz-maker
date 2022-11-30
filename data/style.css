@@ -124,6 +124,8 @@ body{
 }
 
 .intro{
+	display: flex;
+	flex-direction: column;
 	background-color: #ccc;
 	color: #222;
 	max-width: 600px;
@@ -137,24 +139,43 @@ body{
 }
 
 .intro p{
-	margin-top: 1em;
-	margin-bottom: 1em;
-	text-align: center;
+	margin: 1em auto;
+	font-size: 1.4em;
+	color: #222;
+	background-color: #aaa;
+	padding: .5em 1em;
+	font-weight: bold;
+	border-radius: 10px;
 }
 
 .start{
 	display: flex;
-	width: 85px;
-	padding: .5em;
 	background-color: #222;
-	border-radius: 5px;
 	color: #ccc;
-	font-weight: bold;
+	padding: 10px;
+	border-radius: 5px;
 	margin: auto;
 	cursor: pointer;
 	transition: 250ms;
+	font-weight: bold;
 }
 
 .start:hover{
+	background-color: #333;
+}
+
+.restart{
+	display: flex;
+	background-color: #222;
+	color: #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	margin: auto;
+	cursor: pointer;
+	transition: 250ms;
+	font-weight: bold;
+}
+
+.restart:hover{
 	background-color: #333;
 }

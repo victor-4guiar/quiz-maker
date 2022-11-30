@@ -6,14 +6,22 @@ function make(){
 	intro.innerHTML = `
 	<h1>Quiz de Exemplo</h1>
 	<p>Este projeto é apenas exemplo.</p>
-	<span id="start" class="start" onclick="fil()">Começar</span>
+	<span id="start" class="start" onclick="fil(1)">Começar</span>
 	`;
 	main.appendChild(intro);
 }
 
-function fil(){
-	document.getElementById('intro').remove();
-	makeQuiz();
+function fil(val){
+	if(val == 1){
+		document.getElementById('intro').remove();
+		makeQuiz();
+	}else {
+		quizVal.ord = 0;
+		quizVal.acertos = 0;
+		quizVal.erros = 0;
+		document.getElementById('result').remove();
+		makeQuiz();
+	}
 }
 
 function makeQuiz(){

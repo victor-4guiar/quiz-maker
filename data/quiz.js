@@ -34,6 +34,7 @@ function results(){
 			<span id="era-plac" class="era-plac">Erros</span>
 			<span id="erros" class="erros"></span>
 		</div>
+		<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 	`;
 	main.appendChild(result);
 	
@@ -43,6 +44,7 @@ function results(){
 		result.innerHTML = `
 			<h1 id="res">Parabéns!</h1>
 			<p>Você não errou nenhuma pergunta.</p>
+			<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 		`;
 		document.getElementById('res').style.marginBottom = '0px';
 	}else if(quizVal.acertos <= 0){
@@ -51,6 +53,7 @@ function results(){
 		result.innerHTML = `
 			<h1 id="res">Poxa!</h1>
 			<p>Você errou todas as perguntas. :(</p>
+			<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 		`;
 		document.getElementById('res').style.marginBottom = '0px';
 	}else{
