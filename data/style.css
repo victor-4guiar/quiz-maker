@@ -122,3 +122,39 @@ body{
 	min-width: 45%;
 	border-right: 2px solid #777;
 }
+
+.intro{
+	background-color: #ccc;
+	color: #222;
+	max-width: 600px;
+	margin: 1em auto;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+.intro h1{
+	text-align: center;
+}
+
+.intro p{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.start{
+	display: flex;
+	width: 85px;
+	padding: .5em;
+	background-color: #222;
+	border-radius: 5px;
+	color: #ccc;
+	font-weight: bold;
+	margin: auto;
+	cursor: pointer;
+	transition: 250ms;
+}
+
+.start:hover{
+	background-color: #333;
+}

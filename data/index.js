@@ -1,5 +1,23 @@
 function make(){
 	let main = document.getElementById('main');
+	let intro = document.createElement('div');
+	intro.setAttribute('id', 'intro');
+	intro.classList.add('intro');
+	intro.innerHTML = `
+	<h1>Quiz de Exemplo</h1>
+	<p>Este projeto é apenas exemplo.</p>
+	<span id="start" class="start" onclick="fil()">Começar</span>
+	`;
+	main.appendChild(intro);
+}
+
+function fil(){
+	document.getElementById('intro').remove();
+	makeQuiz();
+}
+
+function makeQuiz(){
+	let main = document.getElementById('main');
 	let quiz = document.createElement('div');
 	quiz.setAttribute('id', 'quiz');
 	quiz.classList.add('quiz');
@@ -34,7 +52,7 @@ function addic(clicado){
 	document.getElementById('quiz').remove();
 	
 	if(quizVal.titles[quizVal.ord]  <= quizVal.titles){
-		make();
+		makeQuiz();
 	}else{
 		results();
 	}
