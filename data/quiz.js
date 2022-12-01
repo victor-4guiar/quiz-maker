@@ -43,16 +43,16 @@ let quizVal = {
 	],
 	
 	imgName: [ //Nome das imagens
-	'Pikachu_Surfs', 
+	'Pikachu Surfs', 
 	'Dragonite', 
 	'Raichu', 
 	'Pichu', 
 	'Dratini',
-	'Butterfree',
-	'a',
-	'a',
-	'a',
-	'a'
+	'Ash',
+	'Red and Gold',
+	'Red',
+	'May and Breden',
+	'Cleafairy'
 	],
 	certos: [3, 1, 1, 2, 4, 3, 1, 4, 1, 3] //Numeração das respostas certas
 }
