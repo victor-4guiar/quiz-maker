@@ -59,7 +59,7 @@ function addic(clicado){
 	quizVal.ord++;
 	document.getElementById('quiz').remove();
 	
-	if(quizVal.titles[quizVal.ord]  <= quizVal.titles){
+	if(quizVal.ord <= quizVal.titles.length - 1){
 		makeQuiz();
 	}else{
 		results();
