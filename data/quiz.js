@@ -2,6 +2,11 @@ let quizVal = {
 	ord: 0, //Ordem das questões e opções do quiz
 	acertos: 0,
 	erros: 0,
+	
+	introIM: 'https://i.gifer.com/C54O.gif', //Gif pra intro
+	finalBIM: 'https://media1.giphy.com/media/Fbj7lIkDbwNLa/giphy.gif', //Gif se ganhar
+	finalTIM: 'https://i.gifer.com/FPci.gif', //Gif se perder
+	
 	titles: [ //Títulos do quiz
 	'Pikachu pode aprender o HM03(surf)?', 
 	'Dragonite tem fraquesa com pokémons do tipo...',
@@ -82,6 +87,7 @@ function results(){
 		result.innerHTML = `
 			<h1 id="res">Parabéns!</h1>
 			<p>Você não errou nenhuma pergunta.</p>
+			<img class="finalImg" src="${quizVal.finalBIM}" alt="Parabéns!">
 			<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 		`;
 		document.getElementById('res').style.marginBottom = '0px';
@@ -91,6 +97,7 @@ function results(){
 		result.innerHTML = `
 			<h1 id="res">Poxa!</h1>
 			<p>Você errou todas as perguntas. :(</p>
+			<img class="finalImg" src="${quizVal.finalTIM}" alt="Poxa!">
 			<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 		`;
 		document.getElementById('res').style.marginBottom = '0px';

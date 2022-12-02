@@ -180,3 +180,11 @@ body{
 .restart:hover{
 	background-color: #333;
 }
+
+.finalImg{
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	border-radius: 10px;
+}
