@@ -3,9 +3,9 @@ let quizVal = {
 	acertos: 0,
 	erros: 0,
 	
-	introIM: 'https://i.gifer.com/C54O.gif', //Gif pra intro
-	finalBIM: 'https://media1.giphy.com/media/Fbj7lIkDbwNLa/giphy.gif', //Gif se ganhar
-	finalTIM: 'https://i.gifer.com/FPci.gif', //Gif se perder
+	introIM: 'data/img/img_i.gif', //Gif pra intro
+	finalBIM: 'data/img/img_g.gif', //Gif se ganhar
+	finalTIM: 'data/img/img_p.gif', //Gif se perder
 	
 	titles: [ //Títulos do quiz
 	'Pikachu pode aprender o HM03(surf)?', 
@@ -35,16 +35,16 @@ let quizVal = {
 		
 	],
 	img: [ //Atalho das imagens
-	'https://image.winudf.com/v2/image/YXBwaW52ZW50b3IuYWlfcmVwYXJ0b2g5OS5mbGFwcHliaXJkX3NjcmVlbl8wXzE1MzQ3MDM0MjlfMDc1/screen-0.jpg?fakeurl=1&type=.webp', 
-	'https://www.nintenderos.com/wp-content/uploads/2020/11/dragonite-pokemon.jpg', 
-	'https://uploads.jovemnerd.com.br/wp-content/uploads/2021/07/pikachu-raichu-badminton.jpg', 
-	'https://xboxplay.games/uploadStream/4962.jpg',
-	'http://pa1.narvii.com/6219/330fc95205f2262dd88dbffb2871ec5bb79afc86_00.gif',
-	'https://fictionhorizon.com/wp-content/uploads/2021/10/das-digda-problem.jpg',
-	'https://i.pinimg.com/originals/98/59/c6/9859c6dd67c47991fcaf7aa8832b1942.jpg',
-	'https://i.pinimg.com/originals/7d/eb/4e/7deb4ede8b6dceb18b1e3fe1b2096ec2.png',
-	'https://cdn.donmai.us/original/f7/f1/__may_and_brendan_pokemon_and_3_more_drawn_by_ittumozzz__f7f1043f546956032a10c585a26d4937.jpg',
-	'https://static.wikia.nocookie.net/pokedex-br/images/2/2b/331px-Chousen_clefairy_by_raizy-d6b7n47-1--1-.png/revision/latest?cb=20151224115245&path-prefix=pt-br'
+	'data/img/img_001.png', 
+	'data/img/img_002.png', 
+	'data/img/img_003.png', 
+	'data/img/img_004.png',
+	'data/img/img_005.gif',
+	'data/img/img_006.png',
+	'data/img/img_007.png',
+	'data/img/img_008.png',
+	'data/img/img_009.png',
+	'data/img/img_010.png'
 	],
 	
 	imgName: [ //Nome das imagens
@@ -77,6 +77,7 @@ function results(){
 			<span id="era-plac" class="era-plac">Erros</span>
 			<span id="erros" class="erros"></span>
 		</div>
+		<p>Você errou ${quizVal.erros} e acertou ${quizVal.acertos}.</p>
 		<span class="restart" class="restart" onclick="fil(2)">Refazer</span>
 	`;
 	main.appendChild(result);

@@ -5,6 +5,7 @@ function make(){
 	intro.classList.add('intro');
 	intro.innerHTML = `
 	<h1>Quiz de Exemplo</h1>
+	<img id="Intro" class="quiImg" src="${quizVal.introIM}" alt="Intro">
 	<p>Este projeto é apenas exemplo.</p>
 	<span id="start" class="start" onclick="fil(1)">Começar</span>
 	`;
