@@ -28,7 +28,7 @@ let quizVal = {
 		['Via level', 'Via felicidade', 'Via thunderstone'],
 		['Butterfree', 'Bubasaur', 'Totodile', 'Dragonair'],
 		['Caterpie', 'Pichu', 'Raticate', 'Squirtle'],
-		['Nada', '"E então, você enfim chegou[...]"', '"Que fazes aqui?"', '"Olá, Red[...]"'],
+		['Nada', '"E então, você enfim chegou[...]"', '"Que fazes aqui?"', '"Olá, Gold. [...]"'],
 		['Yuri', 'Ren', 'Minato', 'Satoshi'],
 		['Antes', 'Depois'],
 		['Porque ele era fã de RPGs', 'Porque ele amava monstros quando criança', 'Para reacender brincadeiras de sua infância']
