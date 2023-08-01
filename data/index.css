@@ -99,6 +99,15 @@ main{
 	font-size: 1.2em;
 }
 
+.option:active{
+	background-color: #ddd;
+	color: #111;
+}
+
+.option:focus{
+	outline: none;
+}
+
 footer{
 	display: flex;
 	flex-direction: row;
