@@ -21,6 +21,42 @@ main{
 	flex: 1 0 auto;
 }
 
+.introducao{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 13em;
+}
+
+.introducao h1{
+	font-size: 2em;
+}
+
+.introducao p{
+	font-size: 1.2em;
+}
+
+.introducao button{
+	background-color: #333;
+	border: none;
+	color: #ddd;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 1.2em;
+	border-radius: 20px;
+	height: 40px;
+	font-weight: bold;
+	margin-top: 10px;
+	transition: 300ms ease;
+}
+
+.introducao button:hover{
+	background-color: #ddd;
+	color: #444;
+	cursor: pointer;
+}
+
 .quiz{
 	max-width: 500px;
 	border-radius: 10px;
@@ -30,7 +66,12 @@ main{
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	margin: 2em auto;
+	margin: 9em auto;
+	animation: 500ms aparecer ease;
+}
+
+.desaparecer{
+	animation: 500ms desaparecer ease;
 }
 
 .quiz-header{
@@ -48,6 +89,7 @@ main{
 .quiz-header h1{
 	font-size: 2em;
 	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.60);
+	text-align: center;
 }
 
 .quiz-header .mask{
@@ -56,7 +98,7 @@ main{
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.30);
+	background-color: rgba(0, 0, 0, 0.50);
 }
 
 .quiz-body{
@@ -99,13 +141,16 @@ main{
 	font-size: 1.2em;
 }
 
-.option:active{
-	background-color: #ddd;
-	color: #111;
-}
-
 .option:focus{
 	outline: none;
+	background-color: #ddd;
+	color: #111;
+	font-size: 1.2em;
+	height: 50px;
+	width: 85%;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-radius: 40px;
 }
 
 footer{
@@ -125,4 +170,24 @@ footer a{
 
 footer a:hover{
 	text-decoration: underline;
+}
+
+@keyframes desaparecer{
+	0%{
+		opacity: 100%;
+	}
+	
+	100%{
+		opacity: 0%;
+	}
+}
+
+@keyframes aparecer{
+	0%{
+		opacity: 0%;
+	}
+	
+	100%{
+		opacity: 100%;
+	}
 }

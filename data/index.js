@@ -3,10 +3,10 @@ let quiz = {
 	acertos: 0,
 	erros: 0,
 	lock: false,
-	titulos: ['Qual a cor do Sonic?', 'Uau', 'sim'],
-	fundos: ['data/img/1.jpg', 'data/img/1.jpg', 'data/img/1.jpg'],
-	opcoes: [['Marrom', 'Azul', 'Verde'], ['uc', 'uc', 'at'], ['end', 'end', 'end?...']],
-	certas: [1, 1, 1]
+	titulos: ['Qual a cor do Sonic?', 'Tem jogos do Sonic para Master System?', 'Em que jogo Tails aparece pela primeira vez?'],
+	fundos: ['data/img/1.jpg', 'data/img/2.jpg', 'data/img/3.jpg'],
+	opcoes: [['Marrom', 'Azul', 'Verde'], ['Sim', 'Não'], ['Sonic The Hedgehog 3', 'Sonic & Knuckles', 'Sonic The Hedgehog 2']],
+	certas: [2, 1, 3]
 }
 
 const quizCom = (fundo, titulo) => `
@@ -31,7 +31,7 @@ function load(){
 	for(c=0;c < op.length;c++){
 		document.querySelector('.quiz-body').innerHTML += opcao(op[c], c);
 	}
-}load();
+}
 
 function next(num){
 	if(!quiz.lock){
@@ -44,12 +44,16 @@ function next(num){
 		quiz.quizpos++;
 		setTimeout(()=>{
 			if(quiz.quizpos < quiz.titulos.length){
-				document.querySelector('.quiz').remove();
-				quiz.lock = false;
-				load();
+				document.querySelector('.quiz').classList.add('desaparecer');
+				setTimeout(()=>{
+					document.querySelector('.quiz').remove();
+					quiz.lock = false;
+					load();
+				}, 480);
 			}else{
 				console.log('end.');
-				console.log(`acertos: ${quiz.acertos}`)
+				console.log(`acertos: ${quiz.acertos}`);
+				console.log(`erros: ${quiz.erros}`);
 			}
 		}, 1000);
 	}
