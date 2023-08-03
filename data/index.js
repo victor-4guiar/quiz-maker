@@ -3,10 +3,15 @@ let quiz = {
 	acertos: 0,
 	erros: 0,
 	lock: false,
-	titulos: ['Qual a cor do Sonic?', 'Tem jogos do Sonic para Master System?', 'Em que jogo Tails aparece pela primeira vez?'],
-	fundos: ['data/img/1.jpg', 'data/img/2.jpg', 'data/img/3.jpg'],
-	opcoes: [['Marrom', 'Azul', 'Verde'], ['Sim', 'Não'], ['Sonic The Hedgehog 3', 'Sonic & Knuckles', 'Sonic The Hedgehog 2']],
-	certas: [2, 1, 3]
+	titulos: [
+	'Qual a cor do Sonic?', 
+	'Tem jogos do Sonic para Master System?', 
+	'Em que jogo Tails aparece pela primeira vez?', 
+	'Amy gosta do Sonic?'
+	],
+	fundos: ['data/img/1.jpg', 'data/img/2.jpg', 'data/img/3.jpg', 'data/img/4.jpg'],
+	opcoes: [['Marrom', 'Azul', 'Verde'], ['Sim', 'Não'], ['Sonic The Hedgehog 3', 'Sonic & Knuckles', 'Sonic The Hedgehog 2'], ['Sim', 'Não']],
+	certas: [2, 1, 3, 1]
 }
 
 const quizCom = (fundo, titulo) => `
@@ -23,6 +28,14 @@ const quizCom = (fundo, titulo) => `
 
 const opcao = (texto, num) => `
 	<button class="option" onclick="next(${num})">${texto}</button>
+`
+
+const finalSec = (acertos, erros, msg) => `
+	<section class="final">
+		<p>Acertos: ${acertos} | Erros: ${erros}</p>
+		<p>${msg}</p>
+		<button class="refazer">Refazer Quiz</button>
+	</section>
 `
 
 function load(){
@@ -42,19 +55,31 @@ function next(num){
 		}
 		quiz.lock = true;
 		quiz.quizpos++;
+		document.querySelectorAll('.option')[num].classList.add('clicado');
+		document.querySelectorAll('.option')[num].classList.remove('option');
 		setTimeout(()=>{
-			if(quiz.quizpos < quiz.titulos.length){
-				document.querySelector('.quiz').classList.add('desaparecer');
-				setTimeout(()=>{
-					document.querySelector('.quiz').remove();
-					quiz.lock = false;
+			document.querySelector('.quiz').classList.add('desaparecer');
+			setTimeout(()=>{
+				document.querySelector('.quiz').remove();
+				quiz.lock = false;
+				if(quiz.quizpos < quiz.titulos.length){
 					load();
+				}else{
+					final();
+				}
 				}, 480);
-			}else{
-				console.log('end.');
-				console.log(`acertos: ${quiz.acertos}`);
-				console.log(`erros: ${quiz.erros}`);
-			}
 		}, 1000);
+	}
+}
+
+function final(){
+	document.querySelector('main').innerHTML += finalSec(quiz.acertos, quiz.erros, calc());
+}
+
+function calc(){
+	if(quiz.acertos > quiz.erros){
+		return 'Meus parabéns!'
+	}else{
+		return 'Poxa... Quem sabe na próxima você vá bem!'
 	}
 }
