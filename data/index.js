@@ -7,11 +7,15 @@ let quiz = {
 	'Qual a cor do Sonic?', 
 	'Tem jogos do Sonic para Master System?', 
 	'Em que jogo Tails aparece pela primeira vez?', 
-	'Amy gosta do Sonic?'
+	'Amy gosta do Sonic?',
+	'Knuckles sempre esteve de boa com o Sonic?',
+	'Qual o nome dos bixinhos presentes nos 2 jogos de Sonic Adventure?',
+	'Sonic tem outras transformações além do Super Sonic?',
+	'Qual personagem teve um jogo exclusivo dentre esses?'
 	],
-	fundos: ['data/img/1.jpg', 'data/img/2.jpg', 'data/img/3.jpg', 'data/img/4.jpg'],
-	opcoes: [['Marrom', 'Azul', 'Verde'], ['Sim', 'Não'], ['Sonic The Hedgehog 3', 'Sonic & Knuckles', 'Sonic The Hedgehog 2'], ['Sim', 'Não']],
-	certas: [2, 1, 3, 1]
+	fundos: ['data/img/1.jpg', 'data/img/2.jpg', 'data/img/3.jpg', 'data/img/4.jpg', 'data/img/5.jpg', 'data/img/6.jpg', 'data/img/7.jpg', 'data/img/8.jpg'],
+	opcoes: [['Marrom', 'Azul', 'Verde'], ['Sim', 'Não'], ['Sonic The Hedgehog 3', 'Sonic & Knuckles', 'Sonic The Hedgehog 2'], ['Sim', 'Não'], ['Sim', 'Não'], ['Mini Chaos', 'Chaos', 'Water Pets'], ['Sim', 'Não'], ['Big the Cat', 'Cream the Rabbit', 'Miles Tails Prower']],
+	certas: [2, 1, 3, 1, 2, 2, 1, 3]
 }
 
 const quizCom = (fundo, titulo) => `
@@ -31,10 +35,10 @@ const opcao = (texto, num) => `
 `
 
 const finalSec = (acertos, erros, msg) => `
-	<section class="final">
-		<p>Acertos: ${acertos} | Erros: ${erros}</p>
+	<section class="final aparecer">
+		<h1>Acertos: <span class="fonte-verde">${acertos}</span> | Erros: <span class="fonte-vermelha">${erros}</span></h1>
 		<p>${msg}</p>
-		<button class="refazer">Refazer Quiz</button>
+		<button class="refazer" onclick="rebobinar()">Refazer Quiz</button>
 	</section>
 `
 
@@ -82,4 +86,15 @@ function calc(){
 	}else{
 		return 'Poxa... Quem sabe na próxima você vá bem!'
 	}
+}
+
+function rebobinar(){
+	quiz.quizpos = 0;
+	quiz.acertos = 0;
+	quiz.erros = 0;
+	document.querySelector('.final').classList.add('desaparecer');
+	setTimeout(()=>{
+		document.querySelector('.final').remove();
+		load();
+	}, 480);
 }
