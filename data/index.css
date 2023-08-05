@@ -148,6 +148,10 @@ main{
 	font-size: 1.2em;
 }
 
+.option:focus{
+	outline: none;
+}
+
 .clicado{
 	display: flex;
 	flex-direction: column;
@@ -165,6 +169,10 @@ main{
 	border: none;
 	margin-bottom: 10px;
 	font-weight: bold;
+}
+
+.clicado:focus{
+	outline:none;
 }
 
 .final{
