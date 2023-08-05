@@ -2,7 +2,7 @@
 <p>Crie seu próprio quiz de alta qualidade sem precisar dominar uma linguagem de programação específica!</p>
 <h2>Explicação</h2>
 <p>Este é um projeto que comecei como um quiz específico de código aberto, mas agora, é um sistema mais geral. O quiz de exemplo ainda tem um tema definido mas é apenas para demonstração de como ficaria um quiz no geral.</p>
-<p>O próprio código te auxilia como editar o quiz. É só você mexer no objeto quiz e ir alterando os dados do seu quiz da sua maneira.</p>
+<p>O próprio código te auxilia como editar o quiz. É só você mexer no objeto quiz que fica em <strong>quiz.js</strong> e ir alterando os dados do seu quiz da sua maneira.</p>
 <h2>Programas/Sites Usados</h2>
 <ul>
 	<li>Paletton</li>

@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible">
 		<link rel="stylesheet" href="data/index.css">
 		<script defer src="data/index.js"></script>
+		<script defer src="data/quiz.js"></script>
 		<title>Quiz Maker</title>
 	</head>
 	<body>
@@ -13,7 +14,7 @@
 			<section class="introducao">
 				<h1>Seja bem-vindo(a)!</h1>
 				<p>Este é apenas um quiz de exemplo para demonstrar como ficaria um quiz no geral.</p>
-				<button class="prox" onclick="document.querySelector('.introducao').style.display = 'none'; load();">Começar</button>
+				<button class="prox" onclick="if(ci){ci = false; document.querySelector('.introducao').classList.add('desaparecer'); setTimeout(()=>{document.querySelector('.introducao').remove(); load()}, 480);}">Começar</button>
 			</section>
 		</main>
 		<footer>
