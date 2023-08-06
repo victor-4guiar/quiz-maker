@@ -26,7 +26,11 @@ main{
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	margin-top: 13em;
+	position: absolute;
+	max-width: 100%;
+	top: 50%;
+	left: 40%;
+	transform: translate(-35%, -100%);
 	margin-left: 20px;
 	margin-right: 20px;
 }
@@ -60,15 +64,20 @@ main{
 }
 
 .quiz{
-	max-width: 500px;
-	border-radius: 10px;
-	background-color: #333;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	transform: translate(-50%, -40%);
+	height: 300px;
+	left: 50%;
+	top: 40%;
+	width: 100%;
+	max-width: 520px;
+	border-radius: 10px;
+	background-color: #333;
 	overflow: hidden;
-	margin: 9em auto;
 	animation: 500ms aparecer ease;
 }
 
@@ -81,7 +90,7 @@ main{
 }
 
 .quiz-header{
-	height: 100px;
+	height: 130px;
 	background-color: #000000;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -180,9 +189,12 @@ main{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
 	text-align: center;
 	font-size: 1.4em;
-	margin-top: 10em;
 }
 
 .final h1{
@@ -284,12 +296,18 @@ footer a:hover{
 
 @media (max-width: 520px){
 	.quiz{
-		max-width: 380px;
+		position: absolute;
+		transform: translate(-50%, -40%);
 		height: 300px;
+		left: 50%;
+		top: 40%;
+		width: 100%;
+		max-width: 380px;
+		border-radius: 10px;
 	}
 
 	.quiz-header{
-		transform: translateY(-15px);
+		height: 130px;
 	}
 
 	.quiz-header h1{
@@ -299,8 +317,13 @@ footer a:hover{
 
 @media (min-width: 720px){
 	.quiz{
-		max-width: 700px;
 		height: 300px;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -55%);
+		width: 100%;
+		max-width: 650px;
+		border-radius: 10px;
 	}
 
 	.quiz-header{
