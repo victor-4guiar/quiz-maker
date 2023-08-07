@@ -300,8 +300,12 @@ footer a:hover{
 		border-radius: 10px;
 	}
 
-	.introducao, .final{
+	.introducao{
 		margin-top: 10em;
+	}
+
+	.final{
+		margin-top: 6em;
 	}
 
 	.quiz-header{
